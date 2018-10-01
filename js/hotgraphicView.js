@@ -8,7 +8,7 @@ define([
     var HotGraphicView = ComponentView.extend({
 
         events: {
-            'click .hotgraphic-graphic-pin': 'onPinClicked'
+            'click .hotgraphic__graphic-pin': 'onPinClicked'
         },
 
         initialize: function() {
@@ -92,7 +92,7 @@ define([
 
         getItemElement: function(model) {
             var index = model.get('_index');
-            return this.$('.hotgraphic-graphic-pin').filter('[data-index="' + index + '"]');
+            return this.$('.hotgraphic__graphic-pin').filter('[data-index="' + index + '"]');
         },
 
         onItemsVisitedChange: function(model, _isVisited) {
@@ -127,7 +127,7 @@ define([
 
         postRender: function() {
             this.renderState();
-            this.$('.hotgraphic-widget').imageready(this.setReadyStatus.bind(this));
+            this.$('.hotgraphic__widget').imageready(this.setReadyStatus.bind(this));
 
             this.setUpInviewListener();
         },
